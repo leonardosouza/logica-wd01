@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro de Produtos</title>
+</head>
+<body>
+  <h1>Cadastro de Produtos</h1>
+  <label for="">Produto</label>
+  <input type="text" id="product">
+  <br><br>
+  <label for="">Preço</label>
+  <input type="text" id="price">
+  <br><br>
+  <label for="">Quantidade</label>
+  <input type="text" id="quantity">
+  <br><br>
+  <label for="">Parcelas</label>
+  <input type="text" id="parcel">
+  <br><br>
+  <button onclick="salvar()">Salvar</button>
+
+  <br><br>
+
+  <table border="1">
+    <tr>
+      <td>Produto</td>
+      <td>Preço</td>
+      <td>Quantidade</td>
+      <td>Total</td>
+      <td>Total à Vista</td>
+      <td>Parcelas</td>
+      <td>Valor da Parcela</td>
+    </tr>
+    <tr>
+      <td id="produto"> -- </td>
+      <td id="preco"> 0.00 </td>
+      <td id="quantidade"> 0 </td>
+      <td id="total"> 0.00 </td>
+      <td id="desconto"> 0.00 </td>
+      <td id="parcelas"> 0 </td>
+      <td id="valor-parcela"> 0.00 </td>
+    </tr>
+  </table>
+
+  <script src="cadastro.js"></script>
+</body>
+</html>

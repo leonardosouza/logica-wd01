@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Alfabeto</title>
+</head>
+<body>
+  <h1>Letras do Alfabeto</h1>
+  <script>
+    // estruturas de repetição
+    // while
+    var contador = 97;
+    var limite = 122;
+    while(contador <= limite) {
+      document.write(String.fromCharCode(contador));
+      contador = contador + 1;
+    }
+
+    document.write("<hr><h1>Números - 0 até 100</h1>");
+    var cont = 0;
+    var limit = 100;
+    while(cont <= limit) {
+      var sep = ", ";
+      if(cont == limit) {
+        sep = "";
+      }
+      document.write(cont + sep);
+      cont += 1;
+    }
+
+    document.write("<hr><h1>Números - 100 até 0</h1>");
+    var x = 100;
+    var y = 0;
+    while(x >= y) {
+      var sep = (x == y) ? "" : ", ";
+      document.write(x, sep);
+      x--;
+    }
+
+    document.write("<hr><h1>Pares - 0 até 100</h1>");
+    var ini = 0;
+    var fim = 100;
+    while(ini <= fim) {
+      if(ini % 2 == 0) {
+        document.write(ini, (ini != fim) ? ", " : "");
+      }
+      ini++;
+    }
+
+
+
+  </script>
+</body>
+</html>

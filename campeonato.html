@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Campeonato de Futebol</title>
+</head>
+<body>
+  <h1>Campeonato de Futebol</h1>
+
+  <script>
+    function calculaPontos(vit, emp) {
+      var vitorias = vit * 3;
+      var empates = emp * 1;
+      return vitorias + empates;
+    }
+
+    function quantidadeJogos(v, e, d) {
+      return parseInt(v) + parseInt(e) + parseInt(d);
+    }
+
+    // TIME A
+    var time_A = prompt("Digite o nome do 1o time");
+    var vitorias_A = prompt("Número de vitórias");
+    var empates_A = prompt("Número de empates");
+    var derrotas_A = prompt("Número de derrotas");
+    console.log(
+      "Quantidade Jogos",
+      time_A,
+      quantidadeJogos(vitorias_A, empates_A, derrotas_A)
+    );
+
+    // console.log(time_A, "vitorias", vitorias_A);
+    // console.log(time_A, "empates", empates_A);
+    // console.log(time_A, "derrotas", derrotas_A);
+    console.log(time_A, "pts", calculaPontos(vitorias_A, empates_A));
+    var pontos_A = calculaPontos(vitorias_A, empates_A);
+
+    // TIME B
+    var time_B = prompt("Digite o nome do 2o time");
+    var vitorias_B = prompt("Número de vitórias");
+    var empates_B = prompt("Número de empates");
+    var derrotas_B = prompt("Número de derrotas");
+    console.log(
+      "Quantidade Jogos",
+      time_B,
+      quantidadeJogos(vitorias_B, empates_B, derrotas_B)
+    );
+
+    // console.log(time_B, "vitorias", vitorias_B);
+    // console.log(time_B, "empates", empates_B);
+    // console.log(time_B, "derrotas", derrotas_B);
+    console.log(time_B, "pts", calculaPontos(vitorias_B, empates_B));
+    var pontos_B = calculaPontos(vitorias_B, empates_B);
+
+    if(pontos_A > pontos_B) {
+      console.log("O time", time_A, "é campeão!");
+    } else if(pontos_A < pontos_B) {
+      console.log("O time", time_B, "é campeão!");
+    } else {
+      console.log("Empate! Mesmo número de pontos");
+      if(vitorias_A > vitorias_B) {
+        console.log("O time", time_A, "é o campeão");
+      } else {
+        console.log("O time", time_B, "é o campeão");
+      }
+    }
+
+
+  </script>
+</body>
+</html>

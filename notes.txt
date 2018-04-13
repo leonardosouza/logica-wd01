@@ -1,0 +1,6 @@
+"a".charCodeAt() => 97
+
+a - 97
+z - 122
+
+String.fromCharCode(97) => "a"

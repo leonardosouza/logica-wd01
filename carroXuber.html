@@ -1,0 +1,34 @@
+<h2>Uber X Carro</h2>
+<script>
+    function recebe_numero_do_usuario() {
+        return parseFloat(prompt(texto).replace(",",".").replace("o","0"));
+    }
+    function transforma_decimal_em_texto() {
+        return decimal.toFixed(2).replace(".",",");
+    }
+    var texto;
+    var decimal;
+
+    texto = "Informe a distância percorrida em km";
+    var distancia = recebe_numero_do_usuario();
+    decimal = distancia;
+    document.write("Distância: "+transforma_decimal_em_texto()+"km<br>");
+    texto = "Informe o valor do estacionamento em R$";
+    var estacionamento=recebe_numero_do_usuario();
+    texto = "Informe o valor da gasolina";
+    var gasolina = recebe_numero_do_usuario();
+    var preco_total = gasolina+estacionamento;
+    var tempo = 25;//em minutos
+    var preco_uber = distancia*1.4+2+tempo*0.26;
+
+    document.write("<h3>Carro:</h3>");
+    decimal = estacionamento;
+    document.write("Preço estacionamento: R$"+transforma_decimal_em_texto()+"<br>");
+    decimal = gasolina;
+    document.write("Preço Gasolina: R$"+transforma_decimal_em_texto()+"<br>");
+    decimal = preco_total;
+    document.write("Preço total: R$"+transforma_decimal_em_texto()+"<br>");
+
+    document.write("<h3>Uber:</h3>");
+    document.write("Preço corrida: R$"+preco_uber.toFixed(2).replace(".",","));
+</script>

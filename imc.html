@@ -1,0 +1,12 @@
+<meta charset="utf-8">
+<script src="funcoes.js"></script>
+<script>
+    var texto;
+    texto = "Informe o seu peso";
+    var peso = recebe_numero_do_usuario();
+    texto = "Informe sua altura";
+    var altura = recebe_numero_do_usuario();
+    var imc = peso/(altura*altura);
+    var decimal = imc;
+    document.write("Seu IMC é: "+transforma_decimal_em_texto());
+</script>

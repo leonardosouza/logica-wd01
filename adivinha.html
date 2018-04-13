@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Jogo Adivinhação</title>
+</head>
+<body>
+  <h1>Jogo Adivinhação</h1>
+
+  <script>
+    var numeroPensado = Math.round(Math.random() * 10);
+    console.log("==>", numeroPensado);
+
+    var tentativas = 3, contador = 1;
+    while(contador <= tentativas) {
+      var chute = prompt("Qual o número secreto?");
+      if(chute == numeroPensado) {
+        alert("Parabéns! Acertou miserável!");
+        contador = tentativas;
+      } else {
+        alert("Você errou! Tente novamente!");
+      }
+      contador++;
+    }
+    
+    alert("Jogo Encerrado!");
+
+
+  
+  </script>
+</body>
+</html>
